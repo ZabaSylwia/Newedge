@@ -1,0 +1,40 @@
+img:not([alt]) {
+    border: 5px dashed rgb(255, 0, 0);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0 10%;
+    font-family: $primary-typo;
+    color: $primary-color-typo;
+    font-size: 1.5rem;
+    a {
+        color: $primary-color-dark;
+    }
+}
+
+
+/*carousel annimation*/
+
+
+/*fin*/
+
+header {
+    a {
+        display: inline;
+    }
+    ;
+    .navbar {
+        display: flex;
+        ul {
+            display: flex;
+            li {
+                list-style: none;
+                margin-right: 2rem;
+            }
+        }
+    }
+}

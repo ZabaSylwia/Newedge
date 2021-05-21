@@ -1,0 +1,183 @@
+/*VARIABLES*/
+/*COULEURS*/
+/*desing-colors*/
+/*yellowish*/
+/*pinkish*/
+/*TYPOGRAPHIE*/
+/*slider*/
+/*MAPS*/
+/*ANNIMATION CAROUSEL*/
+a {
+  text-decoration: none;
+  color: inherit;
+}
+a:visited {
+  color: inherit;
+}
+a:hover {
+  text-decoration: none;
+}
+
+@keyframes glisse {
+  0% {
+    transform: translateX(0);
+  }
+  10% {
+    transform: translateX(0);
+  }
+  33% {
+    transform: translateX(-1250px);
+  }
+  43% {
+    transform: translateX(-1250px);
+  }
+  66% {
+    transform: translateX(-2500px);
+  }
+  66% {
+    transform: translateX(-2500px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes glisse-mob {
+  0% {
+    transform: translateX(0);
+  }
+  10% {
+    transform: translateX(0);
+  }
+  33% {
+    transform: translateX(-500px);
+  }
+  43% {
+    transform: translateX(-500px);
+  }
+  66% {
+    transform: translateX(-1000px);
+  }
+  66% {
+    transform: translateX(-1000px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+img:not([alt]) {
+  border: 5px dashed red;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0 10%;
+  font-family: "PT Sans", sans-serif;
+  color: black;
+  font-size: 1.5rem;
+}
+body a {
+  color: #03913e;
+}
+
+/*carousel annimation*/
+/*fin*/
+header a {
+  display: inline;
+}
+header .navbar {
+  display: flex;
+}
+header .navbar ul {
+  display: flex;
+}
+header .navbar ul li {
+  list-style: none;
+  margin-right: 2rem;
+}
+
+@media (max-width: 576px) {
+  .block__about-photo {
+    display: none;
+  }
+
+  .slider img {
+    width: 100%;
+  }
+
+  #slide-2 {
+    display: none;
+  }
+
+  #slide-3 {
+    display: none;
+  }
+}
+@media (min-width: 577px) {
+  header {
+    font-size: 5rem;
+  }
+  header nav {
+    font-size: 3rem;
+  }
+
+  .slider {
+    height: 660px;
+    overflow: hidden;
+    display: block;
+  }
+  .slider .sliders {
+    width: calc(1250px * 3);
+    animation: glisse 10s infinite;
+  }
+  .slider .sliders .slide {
+    float: left;
+  }
+
+  .block__about {
+    display: flex;
+    flex-direction: row-reverse;
+    position: relative;
+    margin: 5%;
+  }
+  .block__about-text {
+    opacity: 0.8;
+    z-index: 1;
+    position: absolute;
+    text-align: center;
+    font-size: 2rem;
+    padding: 4rem;
+    left: -10%;
+    right: 50%;
+    top: 10%;
+    bottom: 10%;
+    width: 70%;
+  }
+  .block__about-text h3 {
+    font-size: 4rem;
+  }
+
+  #boutique h2 {
+    font-size: 4rem;
+  }
+  #boutique .products {
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  #boutique .products .block__product {
+    width: 40%;
+  }
+
+  .product {
+    font-size: 2.5rem;
+  }
+  .product h4 {
+    font-size: 4rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

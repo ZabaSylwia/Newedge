@@ -1,0 +1,22 @@
+@media (max-width: 576px){
+    .block__about{
+        &-photo{
+            
+            display: none;
+        }
+    }
+    .slider{
+        img{
+            width: 100%;
+        }
+    }
+    
+    #slide-2{
+        display: none;
+    }
+    #slide-3{
+        display: none;
+    }
+}
+
+
