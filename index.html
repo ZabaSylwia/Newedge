@@ -5,7 +5,9 @@
     <meta charset="utf-8">
     <title></title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
 
     <meta property="og:title" content="">
     <meta property="og:type" content="">
@@ -17,7 +19,7 @@
     <!-- Place favicon.ico in the root directory -->
 
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="css/style.css" />
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
 
@@ -25,35 +27,131 @@
 </head>
 
 <body>
-    <header>
+    <!--HEADER-->
+
+    <div class="header">
+        <img class="background background_header" alt="Visualisation de technologie blockchain" src="images/background_blockchain-header.png">
+        <div class="container">
+            <div class="row">
+                <nav class="col navbar navbar-expand-lg  ">
+                    <a class="navbar-brand" href="index.html"><img id="logo-newedge" src="images/logo_newedge.png" width="200" alt="Site logo" /></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                     </button>
+                    <div id="navbarContent" class="collapse navbar-collapse">
+                        <ul class="navbar-nav">
+                            <li cless="nav-item active">
+                                <a class="nav-link" href="index.html"> ACCUEIL </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/produits.html"> PRODUITS </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/apropos.html"> A PROPOS </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pages/contact.html"> CONTACT </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!--MAIN-->
+    <div class="container">
+
+        <!--HERO SECTION-->
+        <div class="row">
+            <div class="col-12 col-lg-6">
+                <h1> CLEANRWITH NETTOYAGE 2.0</h1>
+                <P>NEW EDGE COMPANY - distributeur exclusif CleanRwith International pour la France, la Belgique, le Luxembourg et la Suisse.</P>
+                <button type="button" class="btn"><a href="pages/contact.html">CONTACT</a></button>
+            </div>
+            <div class="col-12 col-lg-6">
+                <img src="images/crw-distrubuteur.png" alt="logo distributeur des produits cleanrwith">
+                <img src="images/etiquette-technologie.png" alt="technologie verifié par blockchain">
+            </div>
+        </div>
+
+        <!--Qui sommes nous-->
+
+
+        <div class="row">
+            <img class="background background_row2" alt="Visualisation de technologie blockchain" src="images/background_blockchain-row2.png">
+            <!-- Annimated btns -->
+            <div class="col-12 col-lg-6">
+
+                <div class="card">
+                    <img class="card-img-top" src="images/noun_Check_2200321.png" alt="check icon">
+                    <div class="card-body">
+                        <h5 class="card-title">Transparent</h5>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="images/noun_Time_7383.png" alt="Stopper icon">
+                    <div class="card-body">
+                        <h5 class="card-title">Efficace</h5>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="images/noun_finger print_410657.png" alt="fingerprint icon">
+                    <div class="card-body">
+                        <h5 class="card-title">Sécurisé</h5>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="images/noun_Search_2581978.png" alt="Recherche sur ordinateur icon">
+                    <div class="card-body">
+                        <h5 class="card-title">Tracable</h5>
+                    </div>
+                </div>
 
 
 
 
+            </div>
+            <div class="col-12 col-lg-6">
+                <h2> Qui sommes-nous ?</h2>
+                <P>CleanRwith met sur le marché la première solution de désinfection entièrement traçable par blockchain garantissant le maintien des protocoles pour la sécurité de vos clients et de votre personnel.</P>
+                <button type="button" class="btn"><a href="pages/apropos.html">En savoir plus ></a></button>
+            </div>
 
-        <nav class="navbar">
-            <img height="30%" id="logo-newedge" src="images/logo_newedge.png" alt="logo" />
+        </div>
 
-            <ul>
-                <li>
-                    <a href="index.html"> ACCUEIL </a>
-                </li>
-                <li>
-                    <a href="pages/produits.html"> PRODUITS </a>
-                </li>
-                <li>
-                    <a href="pages/apropos.html"> A PROPOS </a>
-                </li>
-                <li>
-                    <a href="pages/contact.html"> CONTACT </a>
-                </li>
-            </ul>
-        </nav>
+        <!--Gammes de produits-->
 
-    </header>
+        <div class="row">
+            <h2>Nos gammes de produits</h2><br>
+            <p>CleanRwith vous presences ses deux gammes des produits nettoyant et disinfectant tracable</p>
+            <div class="col-12 col-lg-6">
+                <div class="card-body">
+                    <h5 class="card-title">Gamme de produits anticovid</h5>
+                    <p class="card-text">Produits désinfectants cértifiés ANFOR NF EN 14476+A2</p>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <div class="card-body">
+                    <h5 class="card-title">Gamme de produits cradle to cradle</h5>
+                    <p class="card-text">Produits nettoyant clean</p>
+                </div>
 
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col">
+                <p>FOOTER</p>
+            </div>
+        </div>
+    </div>
     <!-- Add your site or application content here -->
-    <header></header>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="js/vendor/modernizr-3.11.2.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
