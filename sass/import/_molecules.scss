@@ -16,6 +16,7 @@
 a {
     text-decoration: none;
     color: inherit;
+    text-decoration: nones;
     &:visited {
         color: inherit;
     }
@@ -24,50 +25,12 @@ a {
     }
 }
 
-@keyframes glisse {
-    0% {
-        transform: translateX(0);
-    }
-    10% {
-        transform: translateX(0);
-    }
-    33% {
-        transform: translateX(-1250px);
-    }
-    43% {
-        transform: translateX(-1250px);
-    }
-    66% {
-        transform: translateX(-2500px);
-    }
-    66% {
-        transform: translateX(-2500px);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
-
-@keyframes glisse-mob {
-    0% {
-        transform: translateX(0);
-    }
-    10% {
-        transform: translateX(0);
-    }
-    33% {
-        transform: translateX(-500px);
-    }
-    43% {
-        transform: translateX(-500px);
-    }
-    66% {
-        transform: translateX(-1000px);
-    }
-    66% {
-        transform: translateX(-1000px);
-    }
-    100% {
-        transform: translateX(0);
-    }
+@mixin button-general {
+    background: rgb(0, 155, 66);
+    background: linear-gradient(54deg, rgba(0, 155, 66, 1) 0%, rgba(110, 193, 228, 1) 100%);
+    font-size: 2em;
+    color: white;
+    margin: 2rem auto 9rem auto;
+    padding: 0.7rem 2rem;
+    border-radius: 10px;
 }

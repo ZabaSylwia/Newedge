@@ -25,6 +25,7 @@
 a {
   text-decoration: none;
   color: inherit;
+  text-decoration: nones;
 }
 a:visited {
   color: inherit;
@@ -33,65 +34,12 @@ a:hover {
   text-decoration: none;
 }
 
-@keyframes glisse {
-  0% {
-    transform: translateX(0);
-  }
-  10% {
-    transform: translateX(0);
-  }
-  33% {
-    transform: translateX(-1250px);
-  }
-  43% {
-    transform: translateX(-1250px);
-  }
-  66% {
-    transform: translateX(-2500px);
-  }
-  66% {
-    transform: translateX(-2500px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-@keyframes glisse-mob {
-  0% {
-    transform: translateX(0);
-  }
-  10% {
-    transform: translateX(0);
-  }
-  33% {
-    transform: translateX(-500px);
-  }
-  43% {
-    transform: translateX(-500px);
-  }
-  66% {
-    transform: translateX(-1000px);
-  }
-  66% {
-    transform: translateX(-1000px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
 img:not([alt]) {
   border: 5px dashed red;
 }
 
-html {
-  font-size: 62.5%;
-}
-
 body {
-  margin: 0 10%;
   font-family: "PT Sans", sans-serif;
-  color: black;
-  font-size: 1.5rem;
 }
 body a {
   color: #03913e;
@@ -99,18 +47,58 @@ body a {
 
 /*carousel annimation*/
 /*fin*/
-header a {
-  display: inline;
+#header .nav-item {
+  font-size: 5rem;
 }
-header .navbar {
+#header .nav-link {
+  color: #03913e;
+  font-size: 6em;
+  color: inherit;
+}
+
+#hero-row {
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.row {
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
 }
-header .navbar ul {
+.row .hero_col-left h1, .row .hero_col-left .h1 {
+  color: #03913e;
+  font-size: 3.7em;
+  font-weight: bold;
+}
+.row .hero_col-left p {
+  font-size: 1.2em;
+}
+.row .hero_col-left button {
+  background: #009b42;
+  background: linear-gradient(54deg, #009b42 0%, #6ec1e4 100%);
+  font-size: 2em;
+  color: white;
+  margin: 2rem auto 9rem auto;
+  padding: 0.7rem 2rem;
+  border-radius: 10px;
+}
+.row .hero_col-left button #contact-btn {
+  color: white;
+  text-decoration: none;
+}
+.row .hero_col-right {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-header .navbar ul li {
-  list-style: none;
-  margin-right: 2rem;
+.row .hero_col-right .hero_img {
+  width: 60%;
+}
+
+#distributeur-logo {
+  background-color: white;
 }
 
 @media (max-width: 576px) {

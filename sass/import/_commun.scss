@@ -2,15 +2,8 @@ img:not([alt]) {
     border: 5px dashed rgb(255, 0, 0);
 }
 
-html {
-    font-size: 62.5%;
-}
-
 body {
-    margin: 0 10%;
     font-family: $primary-typo;
-    color: $primary-color-typo;
-    font-size: 1.5rem;
     a {
         color: $primary-color-dark;
     }
@@ -22,19 +15,56 @@ body {
 
 /*fin*/
 
-header {
-    a {
-        display: inline;
+#header {
+    .nav-item {
+        font-size: 5rem;
     }
-    ;
-    .navbar {
-        display: flex;
-        ul {
+    .nav-link {
+        color: $primary-color-dark;
+        font-size: 6em;
+        color: inherit;
+    }
+}
+
+#hero-row {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    .hero_col {
+        &-left {
+            h1 {
+                color: $primary-color-dark;
+                font-size: 3.7em;
+                font-weight: bold;
+            }
+            p {
+                font-size: 1.2em;
+            }
+            button {
+                @include button-general;
+                #contact-btn {
+                    color: white;
+                    text-decoration: none;
+                }
+            }
+        }
+        &-right {
             display: flex;
-            li {
-                list-style: none;
-                margin-right: 2rem;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .hero_img {
+                width: 60%;
             }
         }
     }
+}
+
+#distributeur-logo {
+    background-color: white;
 }
