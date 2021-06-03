@@ -26,8 +26,7 @@
 a {
   text-decoration: none;
   color: inherit;
-  -webkit-text-decoration: nones;
-          text-decoration: nones;
+  text-decoration: none;
 }
 
 a:visited {
@@ -36,6 +35,21 @@ a:visited {
 
 a:hover {
   text-decoration: none;
+}
+
+.cards .card {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: [first] 1fr [second] 10rem 4rem 10rem 4rem 10rem 1fr;
+      grid-template-columns: [first] 1fr [second] 10rem 4rem 10rem 4rem 10rem 1fr;
+  -ms-grid-rows: 1fr 10rem 6rem 4rem 6rem 10rem 1fr;
+      grid-template-rows: 1fr 10rem 6rem 4rem 6rem 10rem 1fr;
+  width: 10rem;
+  height: 16rem;
+}
+
+.cards .card img {
+  width: 60%;
 }
 
 img:not([alt]) {

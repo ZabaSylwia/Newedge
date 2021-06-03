@@ -31,9 +31,12 @@
     <!--HEADER-->
 
     <div class="header">
-        <img class="background background_header" alt="Visualisation de technologie blockchain" src="images/background_blockchain-header.png">
-        <div class="container">
+
+
+        <div class="container-fluid">
+
             <div class="row">
+
                 <nav class="col navbar navbar-expand-lg  ">
                     <a class="navbar-brand" href="index.html"><img id="logo-newedge" src="images/logo_newedge.png" width="200" alt="Site logo" /></a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,7 +44,7 @@
                      </button>
                     <div id="navbarContent" class="collapse navbar-collapse">
                         <ul class="navbar-nav">
-                            <li cless="nav-item active">
+                            <li class="nav-item">
                                 <a class="nav-link" href="index.html"> ACCUEIL </a>
                             </li>
                             <li class="nav-item">
@@ -58,12 +61,23 @@
                 </nav>
             </div>
         </div>
+
     </div>
-    <!--MAIN-->
+
+    <div id="background" class="container-fluid">
+        <img class="background background_header" alt="Visualisation de technologie blockchain" src="images/background_blockchain-header.png">
+        <img class="background background_row2" alt="Visualisation de technologie blockchain" src="images/background_blockchain-row2.png">
+
+    </div>
     <div class="container">
 
+    </div>
+
+    <!--MAIN-->
+    <div id="main" class="container">
+
         <!--HERO SECTION-->
-        <div class="row my-5">
+        <div id="hero-row" class="row my-5">
             <div class="col-6 ">
                 <div class="hero_col-left ">
                     <h1> CLEANRWITH NETTOYAGE 2.0</h1>
@@ -85,31 +99,33 @@
         <!--Qui sommes nous-->
 
 
-        <div class="row">
-            <img class="background background_row2" alt="Visualisation de technologie blockchain" src="images/background_blockchain-row2.png">
-            <!-- Annimated btns -->
-            <div class="col-12 col-lg-6">
+        <div id="technologie-cards" class="row my-5">
 
-                <div class="card">
-                    <img class="card-img-top" src="images/noun_Check_2200321.png" alt="check icon">
+
+
+            <!-- Annimated btns -->
+            <div class="col-12 col-lg-6 cards">
+
+                <div id="card1" class="card">
+                    <img class="card-img-top" src="images/noun_Check.png" alt="check icon">
                     <div class="card-body">
                         <h5 class="card-title">Transparent</h5>
                     </div>
                 </div>
-                <div class="card">
-                    <img class="card-img-top" src="images/noun_Time_7383.png" alt="Stopper icon">
+                <div id="card2" class="card">
+                    <img class="card-img-top" src="images/noun_Time.png" alt="Stopper icon">
                     <div class="card-body">
                         <h5 class="card-title">Efficace</h5>
                     </div>
                 </div>
-                <div class="card">
-                    <img class="card-img-top" src="images/noun_finger print_410657.png" alt="fingerprint icon">
+                <div id="card3" class="card">
+                    <img class="card-img-top" src="images/noun_finger print.png" alt="fingerprint icon">
                     <div class="card-body">
                         <h5 class="card-title">Sécurisé</h5>
                     </div>
                 </div>
-                <div class="card">
-                    <img class="card-img-top" src="images/noun_Search_2581978.png" alt="Recherche sur ordinateur icon">
+                <div id="card4" class="card">
+                    <img class="card-img-top" src="images/noun_Search.png" alt="Recherche sur ordinateur icon">
                     <div class="card-body">
                         <h5 class="card-title">Tracable</h5>
                     </div>
@@ -119,10 +135,10 @@
 
 
             </div>
-            <div class="col-12 col-lg-6">
-                <h2> Qui sommes-nous ?</h2>
+            <div id="technologie" class="col-12 col-lg-6">
+                <h2> Technologie</h2>
                 <P>CleanRwith met sur le marché la première solution de désinfection entièrement traçable par blockchain garantissant le maintien des protocoles pour la sécurité de vos clients et de votre personnel.</P>
-                <button type="button" class="btn"><a href="pages/apropos.html">En savoir plus ></a></button>
+                <button type="button" class="btn" id="savoir-btn "><a href="pages/apropos.html">En savoir plus ></a></button>
             </div>
 
         </div>
@@ -130,18 +146,24 @@
         <!--Gammes de produits-->
 
         <div class="row">
-            <h2>Nos gammes de produits</h2><br>
-            <p>CleanRwith vous presences ses deux gammes des produits nettoyant et disinfectant tracable</p>
+            <div id="products-row">
+                <h2>Nos gammes de produits</h2><br>
+                <p>CleanRwith vous presences ses deux gammes des produits nettoyant et disinfectant tracable</p>
+            </div>
             <div class="col-12 col-lg-6">
-                <div class="card-body">
-                    <h5 class="card-title">Gamme de produits anticovid</h5>
-                    <p class="card-text">Produits désinfectants cértifiés ANFOR NF EN 14476+A2</p>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Gamme de produits anticovid</h5>
+                        <p class="card-text">Produits désinfectants cértifiés ANFOR NF EN 14476+A2</p>
+                    </div>
                 </div>
             </div>
             <div class="col-12 col-lg-6">
-                <div class="card-body">
-                    <h5 class="card-title">Gamme de produits cradle to cradle</h5>
-                    <p class="card-text">Produits nettoyant clean</p>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Gamme de produits cradle to cradle</h5>
+                        <p class="card-text">Produits nettoyant clean</p>
+                    </div>
                 </div>
 
             </div>
@@ -149,9 +171,14 @@
 
 
 
+
+        <!-- Footer -->
+    </div>
+
+    <div class="container-fluid">
         <!-- Footer -->
         <footer style="    background: rgba(0, 155, 67, 0.774);
-        background: linear-gradient(54deg, rgba(0, 155, 67, 0.3) 0%, rgba(110, 193, 228, 0.3) 100%);" class="text-center text-lg-start  text-muted">
+                background: linear-gradient(54deg, rgba(0, 155, 67, 0.3) 0%, rgba(110, 193, 228, 0.3) 100%);" class="text-center text-lg-start  text-muted">
             <!-- Section: Social media -->
             <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
                 <!-- Left -->
@@ -246,7 +273,6 @@
             </div>
             <!-- Copyright -->
         </footer>
-        <!-- Footer -->
     </div>
     <!-- Add your site or application content here -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
