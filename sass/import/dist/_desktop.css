@@ -1,0 +1,14 @@
+@media (min-width: 992px) {
+  .background {
+    position: absolute;
+    width: 50%;
+  }
+  .background_header {
+    top: -10rem;
+    right: -20%;
+  }
+  .background_row2 {
+    left: -20%;
+    top: 20rem;
+  }
+}

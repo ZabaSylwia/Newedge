@@ -1,37 +1,22 @@
 /*ANNIMATION CAROUSEL*/
 
-.background {
-    position: absolute;
-    &_header {
-        top: -10rem;
-        right: -20%;
-        width: 50%;
-        z-index: -1;
-    }
-    &_row2 {
-        width: 50%;
-        left: -20%;
-        top: 20rem;
-    }
+@mixin background {
+    position: -webkit-sticky;
+    /* Safari */
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: -1;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-    text-decoration: none;
-    &:visited {
-        color: inherit;
-    }
-    &:hover {
-        text-decoration: none;
-    }
-}
+
+/* cards*/
 
 .cards {
     display: grid;
     position: relative;
-    grid-template-columns: [col-02] 10rem [col-03] 4rem [col-04] 10rem [col-05] 4rem [col-06] 10rem;
-    grid-template-rows: [row-02] 10rem [row-03] 6rem [row-04] 4rem [row-05] 6rem [row-06] 10rem;
+    grid-template-columns: [col-02] 15em [col-03] 4rem [col-04] 15em [col-05] 4rem [col-06] 15em;
+    grid-template-rows: [row-02] 16em [row-03] 9rem [row-04] 7rem [row-05] 9rem [row-06] 16em;
     grid-template-areas: " . . card1 . . " "card4 . card1 . card2" "card4 . . . card2" "card4 . card3 . card2" ". . card3 . .";
     #card1 {
         grid-area: card1;
@@ -50,19 +35,111 @@ a {
         justify-content: center;
         align-items: center;
         img {
+            height: 25vh;
+            width: auto;
+            object-fit: contain;
             padding-top: 2rem;
             padding-bottom: 2rem;
             width: 60%;
         }
+        &-title {
+            font-size: 2rem;
+            color: $primary-color-dark;
+            text-transform: uppercase;
+        }
     }
 }
 
+
+/* active cards animation */
+
+.card-text {
+    display: none;
+}
+
+.card:active {
+    background-color: $primary-color-dark;
+    color: white;
+    width: 200%;
+    z-index: 1;
+    height: 200%;
+    p {
+        font-size: 1.5rem;
+    }
+}
+
+.card:active .card-text {
+    display: block;
+}
+
+.card:active .card-img-top {
+    filter: grayscale(1);
+}
+
+.card:active .card-title {
+    color: white;
+}
+
+
+/* BUTTONS*/
+
 @mixin button-general {
-    background: rgb(0, 155, 66);
-    background: linear-gradient(54deg, rgba(0, 155, 66, 1) 0%, rgba(110, 193, 228, 1) 100%);
+    display: inline;
+    background-color: white;
+    background: linear-gradient(54deg, $primary-color-dark 0%, $primary-color-light 100%);
     font-size: 2em;
+    font-weight: 600;
     color: white;
     margin: 2rem auto 9rem auto;
     padding: 0.7rem 2rem;
     border-radius: 10px;
+    text-decoration: none;
+}
+
+@keyframes wiggle {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 1;
+    }
+    40% {
+        opacity: 0;
+    }
+    70% {
+        opacity: 1;
+    }
 }
