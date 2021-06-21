@@ -1,6 +1,7 @@
 @media (min-width: 992px) {
     .background {
-        position: absolute;
+        position: fixed;
+        background-attachment: fixed;
         width: 50%;
         &_header {
             top: -10rem;

@@ -389,6 +389,7 @@ a:hover {
   -ms-grid-rows: [row-02] 16em [row-03] 9rem [row-04] 7rem [row-05] 9rem [row-06] 16em;
       grid-template-rows: [row-02] 16em [row-03] 9rem [row-04] 7rem [row-05] 9rem [row-06] 16em;
       grid-template-areas: " . . card1 . . " "card4 . card1 . card2" "card4 . . . card2" "card4 . card3 . card2" ". . card3 . .";
+  /* active cards animation */
 }
 
 .cards #card1 {
@@ -442,17 +443,23 @@ a:hover {
 }
 
 .cards .card-title {
+  text-align: center;
   font-size: 2rem;
   color: #e03424;
   text-transform: uppercase;
 }
 
-/* active cards animation */
-.card-text {
+.cards .card:hover {
+  width: 150%;
+  height: 150%;
+  z-index: 1;
+}
+
+.cards .card-text {
   display: none;
 }
 
-.card:active {
+.cards .card:active {
   background-color: #e03424;
   color: white;
   width: 200%;
@@ -460,23 +467,73 @@ a:hover {
   height: 200%;
 }
 
-.card:active p {
+.cards .card:active p {
   font-size: 1.5rem;
 }
 
-.card:active .card-text {
+.cards .card:active .card-text {
   display: block;
 }
 
-.card:active .card-img-top {
+.cards .card:active .card-img-top {
   -webkit-filter: grayscale(1);
           filter: grayscale(1);
 }
 
-.card:active .card-title {
+.cards .card:active .card-title {
   color: white;
 }
 
+/*digital package cards*/
+#digital-package .cards {
+  padding-left: 5%;
+  display: -ms-grid;
+  display: grid;
+  position: relative;
+  -ms-grid-columns: [col-02] 30% [col-03] 1fr [col-04] 30% [col-05] 1fr [col-06] 30%;
+      grid-template-columns: [col-02] 30% [col-03] 1fr [col-04] 30% [col-05] 1fr [col-06] 30%;
+  -ms-grid-rows: [row-02] 18em [row-03] 11rem [row-04] 9rem [row-05] 11rem;
+      grid-template-rows: [row-02] 18em [row-03] 11rem [row-04] 9rem [row-05] 11rem;
+      grid-template-areas: " . . card1 . . " "card4 . card1 . card2" "card4 . . . card2" "card4 . . . card2";
+}
+
+/*clients cards*/
+#clients .card {
+  height: 50vh;
+  margin: 2rem auto;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#clients .card img {
+  padding: 3rem;
+}
+
+#clients .card-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+#clients .card .button {
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  max-width: 40rem;
+}
+
+/*flex*/
 /* BUTTONS*/
 @-webkit-keyframes wiggle {
   0% {
@@ -601,23 +658,57 @@ img:not([alt]) {
 
 body {
   font-family: "PT Sans", sans-serif;
+  text-align: justify;
 }
 
-body a {
-  color: #e03424;
-}
-
-#main {
+.main {
   background-color: rgba(255, 255, 255, 0.671);
   z-index: 2;
 }
 
-#main .row {
+.main .row {
   padding-top: 10rem;
   padding-bottom: 10rem;
 }
 
-/*carousel annimation*/
+#tandt-page .row {
+  padding-top: 5rem;
+  padding-bottom: 1rem;
+}
+
+/*basic*/
+.sous-title {
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 3rem;
+}
+
+.title {
+  text-align: left;
+  text-transform: uppercase;
+  margin-bottom: 4rem;
+  color: black;
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.flex-img-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 /*fin*/
 /*background*/
 #background {
@@ -649,7 +740,12 @@ body a {
 }
 
 .header .nav-item {
+  margin: 0 2rem;
   font-size: 2rem;
+}
+
+.header .nav-item a:hover {
+  color: #e03424;
 }
 
 .header .nav-link {
@@ -679,12 +775,6 @@ body a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-#hero-row .hero_col #hero-title {
-  color: black;
-  font-size: 4rem;
-  font-weight: bold;
 }
 
 #hero-row .hero_col-left {
@@ -731,6 +821,10 @@ body a {
   text-decoration: none;
 }
 
+.button a:hover {
+  color: white;
+}
+
 /*technologie*/
 #technologie {
   display: -webkit-box;
@@ -745,18 +839,18 @@ body a {
           justify-content: center;
 }
 
-#technologie-title {
-  font-size: 3rem;
-  font-weight: 600;
-  margin-bottom: 3rem;
-}
-
-#technologie #savoir-btn {
-  color: white;
-}
-
-#distributeur-logo {
-  background-color: white;
+/*digital package*/
+#digital {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #products-row {
@@ -780,6 +874,83 @@ body a {
   font-weight: 600;
 }
 
+/*footer*/
+#footer-row p {
+  color: #444444;
+}
+
+#footer-row p a {
+  text-decoration: none;
+  color: #444444;
+}
+
+#footer-row p a:hover {
+  color: #e03424;
+}
+
+#footer-row h6, #footer-row .h6 {
+  color: #444444;
+  font-size: 1.5rem;
+}
+
+/*button test*/
+/*
+.cta {
+    a {
+        text-decoration: none;
+        color: inherit
+    }
+    position: relative;
+    margin: auto;
+    padding: 19px 22px;
+    transition: all .2s ease;
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        border-radius: 28px;
+        background: rgba($primary-color-light, .5);
+        width: 56px;
+        height: 56px;
+        transition: all .3s ease;
+    }
+    span {
+        position: relative;
+        font-size: 16px;
+        line-height: 18px;
+        font-weight: 900;
+        letter-spacing: .25em;
+        text-transform: uppercase;
+        vertical-align: middle;
+    }
+    svg {
+        position: relative;
+        top: 0;
+        margin-left: 10px;
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke: $primary-color-dark;
+        stroke-width: 2;
+        transform: translateX(-5px);
+        transition: all .3s ease;
+    }
+    &:hover {
+        &:before {
+            width: 100%;
+            background: rgba($primary-color-light, 1);
+        }
+        svg {
+            transform: translateX(0)
+        }
+    }
+    &:active {
+        transform: scale(.96)
+    }
+}
+*/
 @media (max-width: 576px) {
   .block__about-photo {
     display: none;
@@ -868,7 +1039,8 @@ body a {
 
 @media (min-width: 992px) {
   .background {
-    position: absolute;
+    position: fixed;
+    background-attachment: fixed;
     width: 50%;
   }
   .background_header {

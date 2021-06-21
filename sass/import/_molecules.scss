@@ -43,41 +43,102 @@
             width: 60%;
         }
         &-title {
+            text-align: center;
             font-size: 2rem;
             color: $primary-color-dark;
             text-transform: uppercase;
         }
     }
-}
-
-
-/* active cards animation */
-
-.card-text {
-    display: none;
-}
-
-.card:active {
-    background-color: $primary-color-dark;
-    color: white;
-    width: 200%;
-    z-index: 1;
-    height: 200%;
-    p {
-        font-size: 1.5rem;
+    /* active cards animation */
+    .card:hover {
+        width: 150%;
+        height: 150%;
+        z-index: 1;
+    }
+    .card-text {
+        display: none;
+    }
+    .card:active {
+        background-color: $primary-color-dark;
+        color: white;
+        width: 200%;
+        z-index: 1;
+        height: 200%;
+        p {
+            font-size: 1.5rem;
+        }
+    }
+    .card:active .card-text {
+        display: block;
+    }
+    .card:active .card-img-top {
+        filter: grayscale(1);
+    }
+    .card:active .card-title {
+        color: white;
     }
 }
 
-.card:active .card-text {
-    display: block;
+
+/*digital package cards*/
+
+#digital-package {
+    .cards {
+        padding-left: 5%;
+        display: grid;
+        position: relative;
+        grid-template-columns: [col-02] 30% [col-03] 1fr [col-04] 30% [col-05] 1fr [col-06] 30%;
+        grid-template-rows: [row-02] 18em [row-03] 11rem [row-04] 9rem [row-05] 11rem;
+        grid-template-areas: " . . card1 . . " "card4 . card1 . card2" "card4 . . . card2" "card4 . . . card2";
+    }
 }
 
-.card:active .card-img-top {
-    filter: grayscale(1);
+
+/*clients cards*/
+
+#clients {
+    .card {
+        height: 50vh;
+        margin: 2rem auto;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        img {
+            padding: 3rem;
+        }
+        &-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+        .button {
+            transform: scale(0.5);
+            max-width: 40rem;
+        }
+    }
 }
 
-.card:active .card-title {
-    color: white;
+@mixin content-title {
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+}
+
+@mixin content-display {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/*flex*/
+
+@mixin flex-column-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 
