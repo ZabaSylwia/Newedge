@@ -382,6 +382,11 @@ a:hover {
   grid-template-rows: [row-02] 16em [row-03] 9rem [row-04] 7rem [row-05] 9rem [row-06] 16em;
   grid-template-areas: " . . card1 . . " "card4 . card1 . card2" "card4 . . . card2" "card4 . card3 . card2" ". . card3 . .";
   /* active cards animation */
+  /* .card:hover {
+      width: 150%;
+      height: 150%;
+      z-index: 1;
+  }*/
 }
 .cards #card1 {
   grid-area: card1;
@@ -413,11 +418,6 @@ a:hover {
   font-size: 2rem;
   color: #e03424;
   text-transform: uppercase;
-}
-.cards .card:hover {
-  width: 150%;
-  height: 150%;
-  z-index: 1;
 }
 .cards .card-text {
   display: none;
@@ -453,22 +453,30 @@ a:hover {
 }
 
 /*clients cards*/
-#clients .card {
+#clients h2, #clients .h2 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-bottom: 4rem;
+}
+#clients .cardx {
+  padding: 5%;
+  border: 1px solid gray;
+  width: 50%;
   height: 50vh;
   margin: 2rem auto;
   width: 50%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
-#clients .card img {
+#clients .cardx h5, #clients .cardx .h5 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+#clients .cardx img {
   padding: 3rem;
 }
-#clients .card-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-#clients .card .button {
+#clients .cardx .button {
   transform: scale(0.5);
   max-width: 40rem;
 }

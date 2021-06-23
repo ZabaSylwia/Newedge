@@ -50,11 +50,11 @@
         }
     }
     /* active cards animation */
-    .card:hover {
+    /* .card:hover {
         width: 150%;
         height: 150%;
         z-index: 1;
-    }
+    }*/
     .card-text {
         display: none;
     }
@@ -97,19 +97,27 @@
 /*clients cards*/
 
 #clients {
-    .card {
+    h2 {
+        font-size: 3rem;
+        text-transform: uppercase;
+        margin-bottom: 4rem;
+    }
+    .cardx {
+        padding: 5%;
+        border: 1px solid gray;
+        width: 50%;
         height: 50vh;
         margin: 2rem auto;
         width: 50%;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        justify-content: space-evenly;
+        h5 {
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
         img {
             padding: 3rem;
-        }
-        &-body {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
         }
         .button {
             transform: scale(0.5);
