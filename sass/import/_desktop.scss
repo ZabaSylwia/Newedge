@@ -1,15 +1,1 @@
-@media (min-width: 992px) {
-    .background {
-        position: fixed;
-        background-attachment: fixed;
-        width: 50%;
-        &_header {
-            top: -10rem;
-            right: -20%;
-        }
-        &_row2 {
-            left: -20%;
-            top: 20rem;
-        }
-    }
-}
+@media (min-width: 992px) {}

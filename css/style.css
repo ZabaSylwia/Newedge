@@ -374,6 +374,20 @@ a:hover {
 
 /*MAPS*/
 /*ANNIMATION CAROUSEL*/
+.background {
+  position: fixed;
+  background-attachment: fixed;
+  width: 50%;
+}
+.background_header {
+  top: -10rem;
+  right: -20%;
+}
+.background_row2 {
+  left: -20%;
+  top: 20rem;
+}
+
 /* cards*/
 .cards {
   display: grid;
@@ -442,6 +456,18 @@ a:hover {
   color: white;
 }
 
+#industries .hover-exemples {
+  display: none;
+}
+#industries .hover-exemples:active {
+  background-color: #e03424;
+  width: 300%;
+  display: flex;
+}
+#industries .cardx:active {
+  display: none;
+}
+
 /*digital package cards*/
 #digital-package .cards {
   padding-left: 5%;
@@ -450,6 +476,35 @@ a:hover {
   grid-template-columns: [col-02] 30% [col-03] 1fr [col-04] 30% [col-05] 1fr [col-06] 30%;
   grid-template-rows: [row-02] 18em [row-03] 11rem [row-04] 9rem [row-05] 11rem;
   grid-template-areas: " . . card1 . . " "card4 . card1 . card2" "card4 . . . card2" "card4 . . . card2";
+}
+
+/*industries*/
+#industries h2, #industries .h2 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-bottom: 4rem;
+}
+#industries .cardx {
+  text-align: left;
+  padding: 5%;
+  border: 1px solid gray;
+  width: 70%;
+  height: 40vh;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+#industries .cardx h5, #industries .cardx .h5 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+#industries .cardx img {
+  padding: 2rem;
+}
+#industries .cardx .button {
+  transform: scale(0.5);
+  max-width: 40rem;
 }
 
 /*clients cards*/
@@ -464,7 +519,6 @@ a:hover {
   width: 50%;
   height: 50vh;
   margin: 2rem auto;
-  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -481,6 +535,7 @@ a:hover {
   max-width: 40rem;
 }
 
+/*titles*/
 /*flex*/
 /* BUTTONS*/
 @keyframes wiggle {
@@ -843,21 +898,6 @@ body {
   }
   .product h4, .product .h4 {
     font-size: 4rem;
-  }
-}
-@media (min-width: 992px) {
-  .background {
-    position: fixed;
-    background-attachment: fixed;
-    width: 50%;
-  }
-  .background_header {
-    top: -10rem;
-    right: -20%;
-  }
-  .background_row2 {
-    left: -20%;
-    top: 20rem;
   }
 }
 /*!

@@ -9,6 +9,20 @@
     z-index: -1;
 }
 
+.background {
+    position: fixed;
+    background-attachment: fixed;
+    width: 50%;
+    &_header {
+        top: -10rem;
+        right: -20%;
+    }
+    &_row2 {
+        left: -20%;
+        top: 20rem;
+    }
+}
+
 
 /* cards*/
 
@@ -79,6 +93,20 @@
     }
 }
 
+#industries {
+    .hover-exemples {
+        display: none;
+    }
+    .hover-exemples:active {
+        background-color: $primary-color-dark;
+        width: 300%;
+        display: flex;
+    }
+    .cardx:active {
+        display: none;
+    }
+}
+
 
 /*digital package cards*/
 
@@ -94,13 +122,42 @@
 }
 
 
+/*industries*/
+
+#industries {
+    h2 {
+        @include h-2;
+    }
+    .cardx {
+        text-align: left;
+        padding: 5%;
+        border: 1px solid gray;
+        width: 70%;
+        height: 40vh;
+        margin: 2rem auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        h5 {
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+        img {
+            padding: 2rem;
+        }
+        .button {
+            transform: scale(0.5);
+            max-width: 40rem;
+        }
+    }
+}
+
+
 /*clients cards*/
 
 #clients {
     h2 {
-        font-size: 3rem;
-        text-transform: uppercase;
-        margin-bottom: 4rem;
+        @include h-2;
     }
     .cardx {
         padding: 5%;
@@ -108,7 +165,6 @@
         width: 50%;
         height: 50vh;
         margin: 2rem auto;
-        width: 50%;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
@@ -125,6 +181,9 @@
         }
     }
 }
+
+
+/*titles*/
 
 @mixin content-title {
     text-transform: uppercase;
